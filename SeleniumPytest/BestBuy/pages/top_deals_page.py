@@ -13,27 +13,24 @@ class TopDealsPage:
     def __init__(self, driver):
 
         self.driver = driver
-
-        self.wait = WebDriverWait(
-            driver,
-            Config.EXPLICIT_WAIT
-        )
-
+        self.wait = WebDriverWait(driver, Config.EXPLICIT_WAIT)
         self.logger = LogGenerator.loggen()
 
-    # LOCATOR
+    # ===== LOCATORS =====
 
     tv_home_theater = (
         By.XPATH,
         "//*[contains(text(),'TV & Home Theater')]"
     )
 
-    # METHOD
+    # ===== METHODS =====
 
     def click_tv_home_theater(self):
 
+        print("\n========== OPENING TV & HOME THEATER ==========")
+
         self.logger.info(
-            "Clicking TV & Home Theater"
+            "STARTED : Opening TV & Home Theater"
         )
 
         tv = self.wait.until(
@@ -51,8 +48,10 @@ class TopDealsPage:
             "screenshots/tv_home_theater.png"
         )
 
+        print("SUCCESS : TV & Home Theater page opened")
+
         self.logger.info(
-            "TV & Home Theater clicked successfully"
+            "SUCCESS : TV & Home Theater opened"
         )
 
         time.sleep(5)

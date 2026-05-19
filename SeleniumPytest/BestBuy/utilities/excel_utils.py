@@ -12,11 +12,11 @@ class ExcelUtils:
 
         sheet = workbook["BrandFilters"]
 
-        samsung = sheet.cell(2, 1).value
-        lg = sheet.cell(2, 2).value
-        sony = sheet.cell(2, 3).value
-
-        return samsung, lg, sony
+        return (
+            sheet.cell(2, 1).value,
+            sheet.cell(2, 2).value,
+            sheet.cell(2, 3).value
+        )
 
     @staticmethod
     def get_price_data():
@@ -27,44 +27,43 @@ class ExcelUtils:
 
         sheet = workbook["PriceFilters"]
 
-        min_price = sheet.cell(2, 1).value
-        max_price = sheet.cell(2, 2).value
-
-        return min_price, max_price
-
-    @staticmethod
-    def get_invalid_brand_data():
-        workbook = openpyxl.load_workbook(
-            "test_data/test_data.xlsx"
+        return (
+            sheet.cell(2, 1).value,
+            sheet.cell(2, 2).value
         )
-
-        sheet = workbook["InvalidBrandFilter"]
-
-        invalid_brand = sheet.cell(2, 1).value
-
-        return invalid_brand
 
     @staticmethod
     def get_invalid_price_data():
+
         workbook = openpyxl.load_workbook(
             "test_data/test_data.xlsx"
         )
 
         sheet = workbook["InvalidPriceFilters"]
 
-        min_price = sheet.cell(2, 1).value
-        max_price = sheet.cell(2, 2).value
+        return (
+            sheet.cell(2, 1).value,
+            sheet.cell(2, 2).value
+        )
 
-        return min_price, max_price
+    @staticmethod
+    def get_invalid_brand_data():
+
+        workbook = openpyxl.load_workbook(
+            "test_data/test_data.xlsx"
+        )
+
+        sheet = workbook["InvalidBrandFilter"]
+
+        return sheet.cell(2, 1).value
 
     @staticmethod
     def get_invalid_email_data():
+
         workbook = openpyxl.load_workbook(
             "test_data/test_data.xlsx"
         )
 
         sheet = workbook["InvalidEmail"]
 
-        invalid_email = sheet.cell(2, 1).value
-
-        return invalid_email
+        return sheet.cell(2, 1).value

@@ -1,3 +1,5 @@
+import allure
+
 from pages.home_page import HomePage
 from pages.top_deals_page import TopDealsPage
 from pages.tv_products_page import TVProductsPage
@@ -6,10 +8,10 @@ from pages.cart_page import CartPage
 from utilities.excel_utils import ExcelUtils
 
 
+@allure.feature("BestBuy Positive and Negative Testing")
 class TestPositiveNegativeTC:
 
-    # POSITIVE TEST CASE 1
-
+    @allure.story("Navigation Testing")
     def test_top_deals_navigation(self, setup):
 
         driver = setup
@@ -20,14 +22,12 @@ class TestPositiveNegativeTC:
 
         assert "top-deals" in driver.current_url
 
-    # POSITIVE TEST CASE 2
-
+    @allure.story("TV Navigation Testing")
     def test_tv_home_theater_navigation(self, setup):
 
         driver = setup
 
         home = HomePage(driver)
-
         deals = TopDealsPage(driver)
 
         home.click_top_deals()
@@ -36,23 +36,14 @@ class TestPositiveNegativeTC:
 
         assert "tv" in driver.current_url.lower()
 
-    # POSITIVE TEST CASE 3
-
+    @allure.story("Brand Filter Testing")
     def test_brand_filters(self, setup):
 
         driver = setup
 
         home = HomePage(driver)
-
         deals = TopDealsPage(driver)
-
         tv = TVProductsPage(driver)
-
-        # EXCEL BRAND DATA
-
-        # samsung, lg, sony = (
-        #     ExcelUtils.get_brand_data()
-        # )
 
         home.click_top_deals()
 
@@ -60,21 +51,18 @@ class TestPositiveNegativeTC:
 
         tv.apply_brand_filters()
 
-        assert True
+        assert driver.find_element(
+            *tv.samsung_checkbox
+        ).is_displayed()
 
-    # POSITIVE TEST CASE 4
-
+    @allure.story("Price Filter Testing")
     def test_price_filters(self, setup):
 
         driver = setup
 
         home = HomePage(driver)
-
         deals = TopDealsPage(driver)
-
         tv = TVProductsPage(driver)
-
-        # EXCEL PRICE DATA
 
         min_price, max_price = (
             ExcelUtils.get_price_data()
@@ -90,21 +78,16 @@ class TestPositiveNegativeTC:
             "valid_price_filter"
         )
 
-        assert True
+        assert min_price < max_price
 
-    # NEGATIVE TEST CASE 1
-
+    @allure.story("Invalid Price Validation")
     def test_invalid_price_filter(self, setup):
 
         driver = setup
 
         home = HomePage(driver)
-
         deals = TopDealsPage(driver)
-
         tv = TVProductsPage(driver)
-
-        # INVALID PRICE DATA FROM EXCEL
 
         min_price, max_price = (
             ExcelUtils.get_invalid_price_data()
@@ -117,28 +100,19 @@ class TestPositiveNegativeTC:
         tv.apply_price_filters(
             min_price,
             max_price,
-            tv.apply_price_filters(
-                min_price,
-                max_price,
-                "invalid_price_filter"
-            )
+            "invalid_price_filter"
         )
 
-        assert True
+        assert min_price > max_price
 
-    # NEGATIVE TEST CASE 2
-
+    @allure.story("Invalid Brand Validation")
     def test_invalid_brand_filter(self, setup):
 
         driver = setup
 
         home = HomePage(driver)
-
         deals = TopDealsPage(driver)
-
         tv = TVProductsPage(driver)
-
-        # INVALID BRAND DATA FROM EXCEL
 
         invalid_brand = (
             ExcelUtils.get_invalid_brand_data()
@@ -152,21 +126,24 @@ class TestPositiveNegativeTC:
             invalid_brand
         )
 
-        assert True
+        assert invalid_brand is not None
 
+    @allure.story("Invalid Email Validation")
     def test_invalid_email_checkout(self, setup):
+
         driver = setup
 
         home = HomePage(driver)
-
         deals = TopDealsPage(driver)
-
         tv = TVProductsPage(driver)
-
         cart = CartPage(driver)
 
         invalid_email = (
             ExcelUtils.get_invalid_email_data()
+        )
+
+        min_price, max_price = (
+            ExcelUtils.get_price_data()
         )
 
         home.click_top_deals()
@@ -175,13 +152,10 @@ class TestPositiveNegativeTC:
 
         tv.apply_brand_filters()
 
-        min_price, max_price = (
-            ExcelUtils.get_price_data()
-        )
-
         tv.apply_price_filters(
             min_price,
-            max_price
+            max_price,
+            "valid_price_filter"
         )
 
         tv.add_first_two_products()

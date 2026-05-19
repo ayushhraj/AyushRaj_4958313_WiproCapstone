@@ -61,3 +61,59 @@
 2026-05-20 01:25:02,373 : INFO : Entering invalid email
 2026-05-20 01:25:02,569 : INFO : Invalid email entered: abc#xyz.com
 2026-05-20 01:25:05,801 : INFO : Continue button clicked
+2026-05-20 02:14:49,304 : INFO : STARTED : Clicking Top Deals
+2026-05-20 02:14:57,140 : INFO : SUCCESS : Top Deals opened
+2026-05-20 02:15:02,141 : INFO : STARTED : Opening TV & Home Theater
+2026-05-20 02:15:08,877 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-20 02:15:13,878 : INFO : STARTED : Applying Samsung, LG and Sony filters
+2026-05-20 02:15:53,749 : INFO : SUCCESS : Brand filters applied
+2026-05-20 02:15:53,749 : INFO : STARTED : Applying price filters 0 - 250
+2026-05-20 02:16:28,295 : INFO : SUCCESS : Price filters applied
+2026-05-20 02:16:28,296 : INFO : STARTED : Adding first two products
+2026-05-20 02:16:42,769 : INFO : SUCCESS : Two products added to cart
+2026-05-20 02:16:50,761 : INFO : SUCCESS : Cart page opened
+2026-05-20 02:16:56,440 : INFO : SUCCESS : Checkout page opened
+2026-05-20 02:17:13,959 : INFO : STARTED : Clicking Top Deals
+2026-05-20 02:17:22,934 : INFO : SUCCESS : Top Deals opened
+2026-05-20 02:17:41,819 : INFO : STARTED : Clicking Top Deals
+2026-05-20 02:17:48,327 : INFO : SUCCESS : Top Deals opened
+2026-05-20 02:17:53,328 : INFO : STARTED : Opening TV & Home Theater
+2026-05-20 02:18:01,070 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-20 02:18:19,827 : INFO : STARTED : Clicking Top Deals
+2026-05-20 02:18:26,867 : INFO : SUCCESS : Top Deals opened
+2026-05-20 02:18:31,869 : INFO : STARTED : Opening TV & Home Theater
+2026-05-20 02:18:36,945 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-20 02:18:41,947 : INFO : STARTED : Applying Samsung, LG and Sony filters
+2026-05-20 02:19:23,444 : INFO : SUCCESS : Brand filters applied
+2026-05-20 02:19:35,449 : INFO : STARTED : Clicking Top Deals
+2026-05-20 02:19:41,669 : INFO : SUCCESS : Top Deals opened
+2026-05-20 02:19:46,671 : INFO : STARTED : Opening TV & Home Theater
+2026-05-20 02:19:51,241 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-20 02:19:56,241 : INFO : STARTED : Applying price filters 0 - 250
+2026-05-20 02:20:30,208 : INFO : SUCCESS : Price filters applied
+2026-05-20 02:20:42,847 : INFO : STARTED : Clicking Top Deals
+2026-05-20 02:20:50,212 : INFO : SUCCESS : Top Deals opened
+2026-05-20 02:20:55,213 : INFO : STARTED : Opening TV & Home Theater
+2026-05-20 02:21:02,848 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-20 02:21:07,849 : INFO : STARTED : Applying price filters 500 - 100
+2026-05-20 02:21:41,741 : INFO : SUCCESS : Price filters applied
+2026-05-20 02:21:56,769 : INFO : STARTED : Clicking Top Deals
+2026-05-20 02:22:05,272 : INFO : SUCCESS : Top Deals opened
+2026-05-20 02:22:10,273 : INFO : STARTED : Opening TV & Home Theater
+2026-05-20 02:22:18,601 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-20 02:22:23,602 : INFO : STARTED : Applying invalid brand ABCXYZ
+2026-05-20 02:22:34,040 : INFO : SUCCESS : Invalid brand validation completed
+2026-05-20 02:22:47,425 : INFO : STARTED : Clicking Top Deals
+2026-05-20 02:22:55,851 : INFO : SUCCESS : Top Deals opened
+2026-05-20 02:23:00,853 : INFO : STARTED : Opening TV & Home Theater
+2026-05-20 02:23:08,152 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-20 02:23:13,153 : INFO : STARTED : Applying Samsung, LG and Sony filters
+2026-05-20 02:23:53,311 : INFO : SUCCESS : Brand filters applied
+2026-05-20 02:23:53,314 : INFO : STARTED : Applying price filters 0 - 250
+2026-05-20 02:24:25,429 : INFO : SUCCESS : Price filters applied
+2026-05-20 02:24:25,429 : INFO : STARTED : Adding first two products
+2026-05-20 02:24:39,924 : INFO : SUCCESS : Two products added to cart
+2026-05-20 02:24:48,330 : INFO : SUCCESS : Cart page opened
+2026-05-20 02:24:53,821 : INFO : SUCCESS : Checkout page opened
+2026-05-20 02:24:58,823 : INFO : STARTED : Entering invalid email abc#xyz.com
+2026-05-20 02:25:02,300 : INFO : SUCCESS : Invalid email validation completed

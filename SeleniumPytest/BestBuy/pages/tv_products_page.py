@@ -1,4 +1,5 @@
 import time
+import allure
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -13,47 +14,33 @@ class TVProductsPage:
     def __init__(self, driver):
 
         self.driver = driver
-
-        self.wait = WebDriverWait(
-            driver,
-            Config.EXPLICIT_WAIT
-        )
-
+        self.wait = WebDriverWait(driver, Config.EXPLICIT_WAIT)
         self.logger = LogGenerator.loggen()
 
-    # LOCATORS
+    # ===== LOCATORS =====
+
     samsung_checkbox = (By.XPATH, "//input[@id='Samsung']")
     lg_checkbox = (By.XPATH, "//input[@id='LG']")
     sony_checkbox = (By.XPATH, "//input[@id='Sony']")
 
-    min_price = (
-        By.XPATH,
-        "//input[@placeholder='Min Price']"
-    )
+    min_price = (By.XPATH, "//input[@placeholder='Min Price']")
+    max_price = (By.XPATH, "//input[@placeholder='Max Price']")
 
-    max_price = (
-        By.XPATH,
-        "//input[@placeholder='Max Price']"
-    )
-
-    set_button = (
-        By.XPATH,
-        "//button[.//span[text()='Set']]"
-    )
+    set_button = (By.XPATH, "//button[.//span[text()='Set']]")
 
     first_add_to_cart = (
         By.XPATH,
         "(//button[contains(@data-testid,'plp-add-to-cart')])[1]"
     )
 
-    continue_shopping = (
-        By.XPATH,
-        "//a[@data-testid='close-large']"
-    )
-
     second_add_to_cart = (
         By.XPATH,
         "(//button[contains(@data-testid,'plp-add-to-cart')])[2]"
+    )
+
+    continue_shopping = (
+        By.XPATH,
+        "//a[@data-testid='close-large']"
     )
 
     go_to_cart = (
@@ -66,27 +53,26 @@ class TVProductsPage:
         "//input[@placeholder='Search Brand']"
     )
 
-    # METHODS
+    # ===== METHODS =====
+
     def apply_brand_filters(self):
+
+        print("\n========== APPLYING BRAND FILTERS ==========")
+
         self.logger.info(
-            "Applying Brand Filters"
+            "STARTED : Applying Samsung, LG and Sony filters"
         )
 
-        print("\n===== APPLYING BRAND FILTERS =====")
-
-        # SCROLL TO PRODUCTS SECTION
         for i in range(1800, 4200, 300):
+
             self.driver.execute_script(
                 f"window.scrollTo(0, {i});"
             )
 
             time.sleep(0.8)
 
-        print("Scrolled to TV products section")
+        print("SUCCESS : Products section visible")
 
-        time.sleep(5)
-
-        # APPLY SAMSUNG
         samsung = self.wait.until(
             EC.element_to_be_clickable(
                 self.samsung_checkbox
@@ -102,7 +88,6 @@ class TVProductsPage:
 
         time.sleep(3)
 
-        # APPLY LG
         lg = self.wait.until(
             EC.element_to_be_clickable(
                 self.lg_checkbox
@@ -118,7 +103,6 @@ class TVProductsPage:
 
         time.sleep(3)
 
-        # APPLY SONY
         sony = self.wait.until(
             EC.element_to_be_clickable(
                 self.sony_checkbox
@@ -132,48 +116,46 @@ class TVProductsPage:
 
         print("Sony selected")
 
-        # WAIT FOR FILTERS
         time.sleep(10)
 
-        # REFRESH
         self.driver.refresh()
 
-        self.logger.info(
-            "Page refreshed after brand filters"
-        )
+        print("SUCCESS : Brand filters refreshed")
 
-        # WAIT AFTER REFRESH
         time.sleep(8)
 
-        # SCROLL TO FILTERED TV PRODUCTS
-        print("Scrolling to filtered TV products...")
-
         for i in range(1800, 4200, 300):
+
             self.driver.execute_script(
                 f"window.scrollTo(0, {i});"
             )
 
             time.sleep(0.7)
 
-        print("Filter section reached")
-
-        time.sleep(5)
-
-        # SCREENSHOT
         self.driver.save_screenshot(
             "screenshots/brand_filters.png"
         )
 
-        print("SUCCESS: Brand filters applied")
-
-    def apply_price_filters(self, min_val, max_val, screenshot_name="price_filters"):
-        self.logger.info(
-            "Applying Price Filters"
+        allure.attach.file(
+            "screenshots/brand_filters.png",
+            name="Brand Filters",
+            attachment_type=allure.attachment_type.PNG
         )
 
-        print("\n===== APPLYING PRICE FILTERS =====")
+        print("SUCCESS : Brand filters applied")
 
-        # MIN PRICE
+        self.logger.info(
+            "SUCCESS : Brand filters applied"
+        )
+
+    def apply_price_filters(self, min_val, max_val, screenshot_name="price_filters"):
+
+        print("\n========== APPLYING PRICE FILTERS ==========")
+
+        self.logger.info(
+            f"STARTED : Applying price filters {min_val} - {max_val}"
+        )
+
         min_box = self.wait.until(
             EC.element_to_be_clickable(
                 self.min_price
@@ -181,14 +163,12 @@ class TVProductsPage:
         )
 
         min_box.clear()
-
         min_box.send_keys(str(min_val))
 
-        print(f"Min price entered: {min_val}")
+        print(f"Min price entered : {min_val}")
 
         time.sleep(2)
 
-        # MAX PRICE
         max_box = self.wait.until(
             EC.element_to_be_clickable(
                 self.max_price
@@ -196,14 +176,12 @@ class TVProductsPage:
         )
 
         max_box.clear()
-
         max_box.send_keys(str(max_val))
 
-        print(f"Max price entered: {max_val}")
+        print(f"Max price entered : {max_val}")
 
         time.sleep(2)
 
-        # CLICK SET BUTTON
         set_btn = self.wait.until(
             EC.element_to_be_clickable(
                 self.set_button
@@ -215,49 +193,50 @@ class TVProductsPage:
             set_btn
         )
 
-        print("Set button clicked")
+        print("SUCCESS : Set button clicked")
 
-        # WAIT FOR PRICE FILTERS
         time.sleep(10)
 
-        # REFRESH PAGE
         self.driver.refresh()
 
-        self.logger.info(
-            "Page refreshed after price filters"
-        )
+        print("SUCCESS : Page refreshed")
 
-        # WAIT AFTER REFRESH
         time.sleep(8)
 
-        # SCROLL DOWN TO FILTERED TV RESULTS
-        print("Scrolling to filtered TV results...")
-
         for i in range(1800, 4200, 300):
+
             self.driver.execute_script(
                 f"window.scrollTo(0, {i});"
             )
 
             time.sleep(0.8)
 
-        print("Filtered TV products visible")
+        print("SUCCESS : Filtered TV products visible")
 
-        time.sleep(5)
-
-        # SCREENSHOT
         self.driver.save_screenshot(
             f"screenshots/{screenshot_name}.png"
         )
 
-        print("SUCCESS: Price filters applied")
+        allure.attach.file(
+            f"screenshots/{screenshot_name}.png",
+            name="Price Filters",
+            attachment_type=allure.attachment_type.PNG
+        )
+
+        print("SUCCESS : Price filters applied")
+
+        self.logger.info(
+            "SUCCESS : Price filters applied"
+        )
 
     def add_first_two_products(self):
 
+        print("\n========== ADDING PRODUCTS TO CART ==========")
+
         self.logger.info(
-            "Adding first product"
+            "STARTED : Adding first two products"
         )
 
-        # FIRST PRODUCT
         first_product = self.wait.until(
             EC.element_to_be_clickable(
                 self.first_add_to_cart
@@ -276,9 +255,7 @@ class TVProductsPage:
             first_product
         )
 
-        self.logger.info(
-            "First product added"
-        )
+        print("SUCCESS : First product added")
 
         self.driver.save_screenshot(
             "screenshots/first_product_added.png"
@@ -286,7 +263,6 @@ class TVProductsPage:
 
         time.sleep(5)
 
-        # CONTINUE SHOPPING
         continue_btn = self.wait.until(
             EC.element_to_be_clickable(
                 self.continue_shopping
@@ -298,13 +274,10 @@ class TVProductsPage:
             continue_btn
         )
 
-        self.logger.info(
-            "Continue shopping clicked"
-        )
+        print("SUCCESS : Continue shopping clicked")
 
         time.sleep(5)
 
-        # SECOND PRODUCT
         second_product = self.wait.until(
             EC.element_to_be_clickable(
                 self.second_add_to_cart
@@ -323,17 +296,27 @@ class TVProductsPage:
             second_product
         )
 
-        self.logger.info(
-            "Second product added"
-        )
-
         self.driver.save_screenshot(
             "screenshots/second_product_added.png"
+        )
+
+        allure.attach.file(
+            "screenshots/second_product_added.png",
+            name="Products Added",
+            attachment_type=allure.attachment_type.PNG
+        )
+
+        print("SUCCESS : Second product added")
+
+        self.logger.info(
+            "SUCCESS : Two products added to cart"
         )
 
         time.sleep(5)
 
     def click_go_to_cart(self):
+
+        print("\n========== GOING TO CART ==========")
 
         cart = self.wait.until(
             EC.element_to_be_clickable(
@@ -346,34 +329,39 @@ class TVProductsPage:
             cart
         )
 
-        self.logger.info(
-            "Navigated to cart"
-        )
-
         self.driver.save_screenshot(
             "screenshots/cart_page.png"
+        )
+
+        allure.attach.file(
+            "screenshots/cart_page.png",
+            name="Cart Page",
+            attachment_type=allure.attachment_type.PNG
+        )
+
+        print("SUCCESS : Cart page opened")
+
+        self.logger.info(
+            "SUCCESS : Cart page opened"
         )
 
         time.sleep(5)
 
     def apply_invalid_brand_filter(self, brand_name):
 
-        print("\n===== APPLYING INVALID BRAND =====")
+        print("\n========== APPLYING INVALID BRAND ==========")
 
         self.logger.info(
-            f"Applying invalid brand: {brand_name}"
+            f"STARTED : Applying invalid brand {brand_name}"
         )
 
-        # SCROLL TO FILTER SECTION
-
         for i in range(1800, 3500, 300):
+
             self.driver.execute_script(
                 f"window.scrollTo(0, {i});"
             )
 
             time.sleep(0.8)
-
-        # SEARCH BRAND BOX
 
         brand_box = self.wait.until(
             EC.element_to_be_clickable(
@@ -382,10 +370,9 @@ class TVProductsPage:
         )
 
         brand_box.clear()
-
         brand_box.send_keys(brand_name)
 
-        print(f"Entered invalid brand: {brand_name}")
+        print(f"Invalid brand entered : {brand_name}")
 
         time.sleep(5)
 
@@ -393,6 +380,14 @@ class TVProductsPage:
             "screenshots/invalid_brand.png"
         )
 
+        allure.attach.file(
+            "screenshots/invalid_brand.png",
+            name="Invalid Brand",
+            attachment_type=allure.attachment_type.PNG
+        )
+
+        print("SUCCESS : Invalid brand validation completed")
+
         self.logger.info(
-            "Invalid brand validation completed"
+            "SUCCESS : Invalid brand validation completed"
         )

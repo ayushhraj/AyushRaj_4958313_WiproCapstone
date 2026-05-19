@@ -1,0 +1,2 @@
+[32mINFO    [0m BestBuy:home_page.py:29 STARTED : Clicking Top Deals
+[32mINFO    [0m BestBuy:home_page.py:45 SUCCESS : Top Deals opened
