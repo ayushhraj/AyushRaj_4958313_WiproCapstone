@@ -22,9 +22,9 @@ class TestBestBuyWorkflow:
         cart = CartPage(driver)
 
         # EXCEL DATA
-        samsung, lg, sony = (
-            ExcelUtils.get_brand_data()
-        )
+        # samsung, lg, sony = (
+        #     ExcelUtils.get_brand_data()
+        # )
 
         min_price, max_price = (
             ExcelUtils.get_price_data()

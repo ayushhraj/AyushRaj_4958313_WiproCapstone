@@ -8,11 +8,9 @@ class LogGenerator:
     def loggen():
 
         if not os.path.exists("logs"):
-
             os.makedirs("logs")
 
         logger = logging.getLogger("BestBuy")
-
         logger.setLevel(logging.INFO)
 
         if not logger.handlers:
@@ -26,7 +24,6 @@ class LogGenerator:
             )
 
             file_handler.setFormatter(formatter)
-
             logger.addHandler(file_handler)
 
         return logger

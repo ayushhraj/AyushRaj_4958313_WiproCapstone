@@ -31,3 +31,40 @@ class ExcelUtils:
         max_price = sheet.cell(2, 2).value
 
         return min_price, max_price
+
+    @staticmethod
+    def get_invalid_brand_data():
+        workbook = openpyxl.load_workbook(
+            "test_data/test_data.xlsx"
+        )
+
+        sheet = workbook["InvalidBrandFilter"]
+
+        invalid_brand = sheet.cell(2, 1).value
+
+        return invalid_brand
+
+    @staticmethod
+    def get_invalid_price_data():
+        workbook = openpyxl.load_workbook(
+            "test_data/test_data.xlsx"
+        )
+
+        sheet = workbook["InvalidPriceFilters"]
+
+        min_price = sheet.cell(2, 1).value
+        max_price = sheet.cell(2, 2).value
+
+        return min_price, max_price
+
+    @staticmethod
+    def get_invalid_email_data():
+        workbook = openpyxl.load_workbook(
+            "test_data/test_data.xlsx"
+        )
+
+        sheet = workbook["InvalidEmail"]
+
+        invalid_email = sheet.cell(2, 1).value
+
+        return invalid_email

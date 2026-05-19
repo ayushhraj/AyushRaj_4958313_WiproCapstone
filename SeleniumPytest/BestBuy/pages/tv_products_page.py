@@ -22,7 +22,6 @@ class TVProductsPage:
         self.logger = LogGenerator.loggen()
 
     # LOCATORS
-
     samsung_checkbox = (By.XPATH, "//input[@id='Samsung']")
     lg_checkbox = (By.XPATH, "//input[@id='LG']")
     sony_checkbox = (By.XPATH, "//input[@id='Sony']")
@@ -41,11 +40,6 @@ class TVProductsPage:
         By.XPATH,
         "//button[.//span[text()='Set']]"
     )
-
-    # add_to_cart_buttons = (
-    #     By.XPATH,
-    #     "//button[contains(@data-testid,'add-to-cart')]"
-    # )
 
     first_add_to_cart = (
         By.XPATH,
@@ -67,8 +61,12 @@ class TVProductsPage:
         "(//a[@data-testid='go-to-cart'])[2]"
     )
 
-    # METHODS
+    brand_search_box = (
+        By.XPATH,
+        "//input[@placeholder='Search Brand']"
+    )
 
+    # METHODS
     def apply_brand_filters(self):
         self.logger.info(
             "Applying Brand Filters"
@@ -77,7 +75,6 @@ class TVProductsPage:
         print("\n===== APPLYING BRAND FILTERS =====")
 
         # SCROLL TO PRODUCTS SECTION
-
         for i in range(1800, 4200, 300):
             self.driver.execute_script(
                 f"window.scrollTo(0, {i});"
@@ -90,7 +87,6 @@ class TVProductsPage:
         time.sleep(5)
 
         # APPLY SAMSUNG
-
         samsung = self.wait.until(
             EC.element_to_be_clickable(
                 self.samsung_checkbox
@@ -107,7 +103,6 @@ class TVProductsPage:
         time.sleep(3)
 
         # APPLY LG
-
         lg = self.wait.until(
             EC.element_to_be_clickable(
                 self.lg_checkbox
@@ -124,7 +119,6 @@ class TVProductsPage:
         time.sleep(3)
 
         # APPLY SONY
-
         sony = self.wait.until(
             EC.element_to_be_clickable(
                 self.sony_checkbox
@@ -139,11 +133,9 @@ class TVProductsPage:
         print("Sony selected")
 
         # WAIT FOR FILTERS
-
         time.sleep(10)
 
         # REFRESH
-
         self.driver.refresh()
 
         self.logger.info(
@@ -151,11 +143,9 @@ class TVProductsPage:
         )
 
         # WAIT AFTER REFRESH
-
         time.sleep(8)
 
         # SCROLL TO FILTERED TV PRODUCTS
-
         print("Scrolling to filtered TV products...")
 
         for i in range(1800, 4200, 300):
@@ -170,14 +160,13 @@ class TVProductsPage:
         time.sleep(5)
 
         # SCREENSHOT
-
         self.driver.save_screenshot(
             "screenshots/brand_filters.png"
         )
 
         print("SUCCESS: Brand filters applied")
 
-    def apply_price_filters(self, min_val, max_val):
+    def apply_price_filters(self, min_val, max_val, screenshot_name="price_filters"):
         self.logger.info(
             "Applying Price Filters"
         )
@@ -185,7 +174,6 @@ class TVProductsPage:
         print("\n===== APPLYING PRICE FILTERS =====")
 
         # MIN PRICE
-
         min_box = self.wait.until(
             EC.element_to_be_clickable(
                 self.min_price
@@ -201,7 +189,6 @@ class TVProductsPage:
         time.sleep(2)
 
         # MAX PRICE
-
         max_box = self.wait.until(
             EC.element_to_be_clickable(
                 self.max_price
@@ -217,7 +204,6 @@ class TVProductsPage:
         time.sleep(2)
 
         # CLICK SET BUTTON
-
         set_btn = self.wait.until(
             EC.element_to_be_clickable(
                 self.set_button
@@ -232,11 +218,9 @@ class TVProductsPage:
         print("Set button clicked")
 
         # WAIT FOR PRICE FILTERS
-
         time.sleep(10)
 
         # REFRESH PAGE
-
         self.driver.refresh()
 
         self.logger.info(
@@ -244,11 +228,9 @@ class TVProductsPage:
         )
 
         # WAIT AFTER REFRESH
-
         time.sleep(8)
 
         # SCROLL DOWN TO FILTERED TV RESULTS
-
         print("Scrolling to filtered TV results...")
 
         for i in range(1800, 4200, 300):
@@ -263,9 +245,8 @@ class TVProductsPage:
         time.sleep(5)
 
         # SCREENSHOT
-
         self.driver.save_screenshot(
-            "screenshots/price_filters.png"
+            f"screenshots/{screenshot_name}.png"
         )
 
         print("SUCCESS: Price filters applied")
@@ -277,7 +258,6 @@ class TVProductsPage:
         )
 
         # FIRST PRODUCT
-
         first_product = self.wait.until(
             EC.element_to_be_clickable(
                 self.first_add_to_cart
@@ -307,7 +287,6 @@ class TVProductsPage:
         time.sleep(5)
 
         # CONTINUE SHOPPING
-
         continue_btn = self.wait.until(
             EC.element_to_be_clickable(
                 self.continue_shopping
@@ -326,7 +305,6 @@ class TVProductsPage:
         time.sleep(5)
 
         # SECOND PRODUCT
-
         second_product = self.wait.until(
             EC.element_to_be_clickable(
                 self.second_add_to_cart
@@ -377,3 +355,44 @@ class TVProductsPage:
         )
 
         time.sleep(5)
+
+    def apply_invalid_brand_filter(self, brand_name):
+
+        print("\n===== APPLYING INVALID BRAND =====")
+
+        self.logger.info(
+            f"Applying invalid brand: {brand_name}"
+        )
+
+        # SCROLL TO FILTER SECTION
+
+        for i in range(1800, 3500, 300):
+            self.driver.execute_script(
+                f"window.scrollTo(0, {i});"
+            )
+
+            time.sleep(0.8)
+
+        # SEARCH BRAND BOX
+
+        brand_box = self.wait.until(
+            EC.element_to_be_clickable(
+                self.brand_search_box
+            )
+        )
+
+        brand_box.clear()
+
+        brand_box.send_keys(brand_name)
+
+        print(f"Entered invalid brand: {brand_name}")
+
+        time.sleep(5)
+
+        self.driver.save_screenshot(
+            "screenshots/invalid_brand.png"
+        )
+
+        self.logger.info(
+            "Invalid brand validation completed"
+        )
