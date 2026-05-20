@@ -1,119 +1,148 @@
-2026-05-20 01:13:26,127 : INFO : Clicking Top Deals
-2026-05-20 01:13:33,237 : INFO : Top Deals clicked successfully
-2026-05-20 01:13:38,238 : INFO : Clicking TV & Home Theater
-2026-05-20 01:13:44,920 : INFO : TV & Home Theater clicked successfully
-2026-05-20 01:13:49,921 : INFO : Applying Brand Filters
-2026-05-20 01:14:21,970 : INFO : Page refreshed after brand filters
-2026-05-20 01:14:40,835 : INFO : Applying Price Filters
-2026-05-20 01:14:59,688 : INFO : Page refreshed after price filters
-2026-05-20 01:15:19,395 : INFO : Adding first product
-2026-05-20 01:15:21,514 : INFO : First product added
-2026-05-20 01:15:26,696 : INFO : Continue shopping clicked
-2026-05-20 01:15:33,771 : INFO : Second product added
-2026-05-20 01:15:41,859 : INFO : Navigated to cart
-2026-05-20 01:15:47,840 : INFO : Checkout clicked successfully
-2026-05-20 01:16:06,134 : INFO : Clicking Top Deals
-2026-05-20 01:16:13,437 : INFO : Top Deals clicked successfully
-2026-05-20 01:16:31,166 : INFO : Clicking Top Deals
-2026-05-20 01:16:37,872 : INFO : Top Deals clicked successfully
-2026-05-20 01:16:42,873 : INFO : Clicking TV & Home Theater
-2026-05-20 01:16:50,017 : INFO : TV & Home Theater clicked successfully
-2026-05-20 01:17:07,358 : INFO : Clicking Top Deals
-2026-05-20 01:17:14,898 : INFO : Top Deals clicked successfully
-2026-05-20 01:17:19,899 : INFO : Clicking TV & Home Theater
-2026-05-20 01:17:26,966 : INFO : TV & Home Theater clicked successfully
-2026-05-20 01:17:31,966 : INFO : Applying Brand Filters
-2026-05-20 01:18:04,097 : INFO : Page refreshed after brand filters
-2026-05-20 01:18:36,135 : INFO : Clicking Top Deals
-2026-05-20 01:18:42,854 : INFO : Top Deals clicked successfully
-2026-05-20 01:18:47,855 : INFO : Clicking TV & Home Theater
-2026-05-20 01:18:54,413 : INFO : TV & Home Theater clicked successfully
-2026-05-20 01:18:59,414 : INFO : Applying Price Filters
-2026-05-20 01:19:18,757 : INFO : Page refreshed after price filters
-2026-05-20 01:19:51,220 : INFO : Clicking Top Deals
-2026-05-20 01:19:56,967 : INFO : Top Deals clicked successfully
-2026-05-20 01:20:01,967 : INFO : Clicking TV & Home Theater
-2026-05-20 01:20:11,666 : INFO : TV & Home Theater clicked successfully
-2026-05-20 01:20:16,666 : INFO : Applying Price Filters
-2026-05-20 01:20:35,677 : INFO : Page refreshed after price filters
-2026-05-20 01:20:55,302 : INFO : Applying Price Filters
-2026-05-20 01:21:13,591 : INFO : Page refreshed after price filters
-2026-05-20 01:21:50,473 : INFO : Clicking Top Deals
-2026-05-20 01:21:56,833 : INFO : Top Deals clicked successfully
-2026-05-20 01:22:01,834 : INFO : Clicking TV & Home Theater
-2026-05-20 01:22:08,591 : INFO : TV & Home Theater clicked successfully
-2026-05-20 01:22:13,592 : INFO : Applying invalid brand: ABCXYZ
-2026-05-20 01:22:24,028 : INFO : Invalid brand validation completed
-2026-05-20 01:22:37,492 : INFO : Clicking Top Deals
-2026-05-20 01:22:43,758 : INFO : Top Deals clicked successfully
-2026-05-20 01:22:48,759 : INFO : Clicking TV & Home Theater
-2026-05-20 01:22:55,656 : INFO : TV & Home Theater clicked successfully
-2026-05-20 01:23:00,657 : INFO : Applying Brand Filters
-2026-05-20 01:23:31,939 : INFO : Page refreshed after brand filters
-2026-05-20 01:23:50,795 : INFO : Applying Price Filters
-2026-05-20 01:24:09,111 : INFO : Page refreshed after price filters
-2026-05-20 01:24:28,722 : INFO : Adding first product
-2026-05-20 01:24:30,786 : INFO : First product added
-2026-05-20 01:24:35,977 : INFO : Continue shopping clicked
-2026-05-20 01:24:43,067 : INFO : Second product added
-2026-05-20 01:24:51,544 : INFO : Navigated to cart
-2026-05-20 01:24:57,372 : INFO : Checkout clicked successfully
-2026-05-20 01:25:02,373 : INFO : Entering invalid email
-2026-05-20 01:25:02,569 : INFO : Invalid email entered: abc#xyz.com
-2026-05-20 01:25:05,801 : INFO : Continue button clicked
-2026-05-20 02:14:49,304 : INFO : STARTED : Clicking Top Deals
-2026-05-20 02:14:57,140 : INFO : SUCCESS : Top Deals opened
-2026-05-20 02:15:02,141 : INFO : STARTED : Opening TV & Home Theater
-2026-05-20 02:15:08,877 : INFO : SUCCESS : TV & Home Theater opened
-2026-05-20 02:15:13,878 : INFO : STARTED : Applying Samsung, LG and Sony filters
-2026-05-20 02:15:53,749 : INFO : SUCCESS : Brand filters applied
-2026-05-20 02:15:53,749 : INFO : STARTED : Applying price filters 0 - 250
-2026-05-20 02:16:28,295 : INFO : SUCCESS : Price filters applied
-2026-05-20 02:16:28,296 : INFO : STARTED : Adding first two products
-2026-05-20 02:16:42,769 : INFO : SUCCESS : Two products added to cart
-2026-05-20 02:16:50,761 : INFO : SUCCESS : Cart page opened
-2026-05-20 02:16:56,440 : INFO : SUCCESS : Checkout page opened
-2026-05-20 02:17:13,959 : INFO : STARTED : Clicking Top Deals
-2026-05-20 02:17:22,934 : INFO : SUCCESS : Top Deals opened
-2026-05-20 02:17:41,819 : INFO : STARTED : Clicking Top Deals
-2026-05-20 02:17:48,327 : INFO : SUCCESS : Top Deals opened
-2026-05-20 02:17:53,328 : INFO : STARTED : Opening TV & Home Theater
-2026-05-20 02:18:01,070 : INFO : SUCCESS : TV & Home Theater opened
-2026-05-20 02:18:19,827 : INFO : STARTED : Clicking Top Deals
-2026-05-20 02:18:26,867 : INFO : SUCCESS : Top Deals opened
-2026-05-20 02:18:31,869 : INFO : STARTED : Opening TV & Home Theater
-2026-05-20 02:18:36,945 : INFO : SUCCESS : TV & Home Theater opened
-2026-05-20 02:18:41,947 : INFO : STARTED : Applying Samsung, LG and Sony filters
-2026-05-20 02:19:23,444 : INFO : SUCCESS : Brand filters applied
-2026-05-20 02:19:35,449 : INFO : STARTED : Clicking Top Deals
-2026-05-20 02:19:41,669 : INFO : SUCCESS : Top Deals opened
-2026-05-20 02:19:46,671 : INFO : STARTED : Opening TV & Home Theater
-2026-05-20 02:19:51,241 : INFO : SUCCESS : TV & Home Theater opened
-2026-05-20 02:19:56,241 : INFO : STARTED : Applying price filters 0 - 250
-2026-05-20 02:20:30,208 : INFO : SUCCESS : Price filters applied
-2026-05-20 02:20:42,847 : INFO : STARTED : Clicking Top Deals
-2026-05-20 02:20:50,212 : INFO : SUCCESS : Top Deals opened
-2026-05-20 02:20:55,213 : INFO : STARTED : Opening TV & Home Theater
-2026-05-20 02:21:02,848 : INFO : SUCCESS : TV & Home Theater opened
-2026-05-20 02:21:07,849 : INFO : STARTED : Applying price filters 500 - 100
-2026-05-20 02:21:41,741 : INFO : SUCCESS : Price filters applied
-2026-05-20 02:21:56,769 : INFO : STARTED : Clicking Top Deals
-2026-05-20 02:22:05,272 : INFO : SUCCESS : Top Deals opened
-2026-05-20 02:22:10,273 : INFO : STARTED : Opening TV & Home Theater
-2026-05-20 02:22:18,601 : INFO : SUCCESS : TV & Home Theater opened
-2026-05-20 02:22:23,602 : INFO : STARTED : Applying invalid brand ABCXYZ
-2026-05-20 02:22:34,040 : INFO : SUCCESS : Invalid brand validation completed
-2026-05-20 02:22:47,425 : INFO : STARTED : Clicking Top Deals
-2026-05-20 02:22:55,851 : INFO : SUCCESS : Top Deals opened
-2026-05-20 02:23:00,853 : INFO : STARTED : Opening TV & Home Theater
-2026-05-20 02:23:08,152 : INFO : SUCCESS : TV & Home Theater opened
-2026-05-20 02:23:13,153 : INFO : STARTED : Applying Samsung, LG and Sony filters
-2026-05-20 02:23:53,311 : INFO : SUCCESS : Brand filters applied
-2026-05-20 02:23:53,314 : INFO : STARTED : Applying price filters 0 - 250
-2026-05-20 02:24:25,429 : INFO : SUCCESS : Price filters applied
-2026-05-20 02:24:25,429 : INFO : STARTED : Adding first two products
-2026-05-20 02:24:39,924 : INFO : SUCCESS : Two products added to cart
-2026-05-20 02:24:48,330 : INFO : SUCCESS : Cart page opened
-2026-05-20 02:24:53,821 : INFO : SUCCESS : Checkout page opened
-2026-05-20 02:24:58,823 : INFO : STARTED : Entering invalid email abc#xyz.com
-2026-05-20 02:25:02,300 : INFO : SUCCESS : Invalid email validation completed
+
+2026-05-21 02:45:57,437 : INFO : Opening BestBuy website
+2026-05-21 02:46:01,833 : INFO : United States selected
+2026-05-21 02:46:06,847 : INFO : =====================TEST-STARTED============================
+2026-05-21 02:46:06,847 : INFO : STARTED : Clicking Top Deals
+2026-05-21 02:46:13,486 : INFO : Screenshot captured: screenshots/top_deals_20260521_024613.png
+2026-05-21 02:46:13,486 : INFO : SUCCESS : Top Deals opened
+2026-05-21 02:46:18,509 : INFO : STARTED : Opening TV & Home Theater
+2026-05-21 02:46:27,111 : INFO : Screenshot captured: screenshots/tv_home_theater_20260521_024626.png
+2026-05-21 02:46:27,112 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-21 02:46:32,133 : INFO : STARTED : Applying Samsung, LG and Sony filters
+2026-05-21 02:47:14,140 : INFO : Screenshot captured: screenshots/brand_filters_20260521_024713.png
+2026-05-21 02:47:14,140 : INFO : SUCCESS : Brand filters applied
+2026-05-21 02:47:14,165 : INFO : STARTED : Applying price filters 0 - 250
+2026-05-21 02:47:46,756 : INFO : Screenshot captured: screenshots/valid_price_filter_20260521_024746.png
+2026-05-21 02:47:46,757 : INFO : SUCCESS : Price filters applied
+2026-05-21 02:47:46,757 : INFO : STARTED : Adding first two products
+2026-05-21 02:47:49,022 : INFO : Screenshot captured: screenshots/first_product_added_20260521_024748.png
+2026-05-21 02:48:01,271 : INFO : Screenshot captured: screenshots/second_product_added_20260521_024801.png
+2026-05-21 02:48:01,272 : INFO : SUCCESS : Two products added to cart
+2026-05-21 02:48:11,036 : INFO : Screenshot captured: screenshots/cart_page_20260521_024810.png
+2026-05-21 02:48:11,036 : INFO : SUCCESS : Cart page opened
+2026-05-21 02:48:16,628 : INFO : Screenshot captured: screenshots/checkout_page_20260521_024816.png
+2026-05-21 02:48:16,628 : INFO : SUCCESS : Checkout page opened
+2026-05-21 02:48:21,649 : INFO : Closing browser
+2026-05-21 02:48:25,391 : INFO : Opening BestBuy website
+2026-05-21 02:48:29,492 : INFO : United States selected
+2026-05-21 02:48:34,494 : INFO : =====================TEST-STARTED============================
+2026-05-21 02:48:34,495 : INFO : STARTED : Clicking Top Deals
+2026-05-21 02:48:41,835 : INFO : Screenshot captured: screenshots/top_deals_20260521_024841.png
+2026-05-21 02:48:41,836 : INFO : SUCCESS : Top Deals opened
+2026-05-21 02:48:46,859 : INFO : Closing browser
+2026-05-21 02:48:50,033 : INFO : Opening BestBuy website
+2026-05-21 02:48:54,069 : INFO : United States selected
+2026-05-21 02:48:59,071 : INFO : =====================TEST-STARTED============================
+2026-05-21 02:48:59,071 : INFO : STARTED : Clicking Top Deals
+2026-05-21 02:49:04,458 : INFO : Screenshot captured: screenshots/top_deals_20260521_024903.png
+2026-05-21 02:49:04,458 : INFO : SUCCESS : Top Deals opened
+2026-05-21 02:49:09,458 : INFO : STARTED : Opening TV & Home Theater
+2026-05-21 02:49:16,925 : INFO : Screenshot captured: screenshots/tv_home_theater_20260521_024916.png
+2026-05-21 02:49:16,925 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-21 02:49:21,940 : INFO : Closing browser
+2026-05-21 02:49:25,077 : INFO : Opening BestBuy website
+2026-05-21 02:49:29,100 : INFO : United States selected
+2026-05-21 02:49:34,102 : INFO : =====================TEST-STARTED============================
+2026-05-21 02:49:34,102 : INFO : STARTED : Clicking Top Deals
+2026-05-21 02:49:40,984 : INFO : Screenshot captured: screenshots/top_deals_20260521_024940.png
+2026-05-21 02:49:40,984 : INFO : SUCCESS : Top Deals opened
+2026-05-21 02:49:45,985 : INFO : STARTED : Opening TV & Home Theater
+2026-05-21 02:49:51,635 : INFO : Screenshot captured: screenshots/tv_home_theater_20260521_024950.png
+2026-05-21 02:49:51,635 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-21 02:49:56,635 : INFO : STARTED : Applying Samsung, LG and Sony filters
+2026-05-21 02:50:36,966 : INFO : Screenshot captured: screenshots/brand_filters_20260521_025036.png
+2026-05-21 02:50:36,966 : INFO : SUCCESS : Brand filters applied
+2026-05-21 02:50:37,132 : INFO : Closing browser
+2026-05-21 02:50:40,753 : INFO : Opening BestBuy website
+2026-05-21 02:50:44,570 : INFO : United States selected
+2026-05-21 02:50:49,587 : INFO : =====================TEST-STARTED============================
+2026-05-21 02:50:49,587 : INFO : STARTED : Clicking Top Deals
+2026-05-21 02:50:55,592 : INFO : Screenshot captured: screenshots/top_deals_20260521_025055.png
+2026-05-21 02:50:55,592 : INFO : SUCCESS : Top Deals opened
+2026-05-21 02:51:00,592 : INFO : STARTED : Opening TV & Home Theater
+2026-05-21 02:51:08,288 : INFO : Screenshot captured: screenshots/tv_home_theater_20260521_025108.png
+2026-05-21 02:51:08,289 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-21 02:51:13,290 : INFO : STARTED : Applying price filters 0 - 250
+2026-05-21 02:51:48,185 : INFO : Screenshot captured: screenshots/valid_price_filter_20260521_025148.png
+2026-05-21 02:51:48,185 : INFO : SUCCESS : Price filters applied
+2026-05-21 02:51:48,218 : INFO : Closing browser
+2026-05-21 02:51:51,400 : INFO : Opening BestBuy website
+2026-05-21 02:51:55,695 : INFO : United States selected
+2026-05-21 02:52:00,697 : INFO : =====================TEST-STARTED============================
+2026-05-21 02:52:00,697 : INFO : STARTED : Clicking Top Deals
+2026-05-21 02:52:07,707 : INFO : Screenshot captured: screenshots/top_deals_20260521_025207.png
+2026-05-21 02:52:07,708 : INFO : SUCCESS : Top Deals opened
+2026-05-21 02:52:12,708 : INFO : STARTED : Opening TV & Home Theater
+2026-05-21 02:52:18,182 : INFO : Screenshot captured: screenshots/tv_home_theater_20260521_025218.png
+2026-05-21 02:52:18,182 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-21 02:52:23,183 : INFO : STARTED : Applying Samsung, LG and Sony filters
+2026-05-21 02:53:03,447 : INFO : Screenshot captured: screenshots/brand_filters_20260521_025303.png
+2026-05-21 02:53:03,448 : INFO : SUCCESS : Brand filters applied
+2026-05-21 02:53:03,448 : INFO : STARTED : Applying price filters 100 - 500
+2026-05-21 02:53:37,798 : INFO : Screenshot captured: screenshots/valid_price_filter_20260521_025337.png
+2026-05-21 02:53:37,799 : INFO : SUCCESS : Price filters applied
+2026-05-21 02:53:37,799 : INFO : STARTED : Adding first two products
+2026-05-21 02:53:39,982 : INFO : Screenshot captured: screenshots/first_product_added_20260521_025339.png
+2026-05-21 02:53:52,213 : INFO : Screenshot captured: screenshots/second_product_added_20260521_025352.png
+2026-05-21 02:53:52,214 : INFO : SUCCESS : Two products added to cart
+2026-05-21 02:54:00,771 : INFO : Screenshot captured: screenshots/cart_page_20260521_025400.png
+2026-05-21 02:54:00,771 : INFO : SUCCESS : Cart page opened
+2026-05-21 02:54:05,772 : INFO : STARTED : Updating product quantity to 2
+2026-05-21 02:54:10,963 : INFO : Screenshot captured: screenshots/updated_product_quantity_20260521_025410.png
+2026-05-21 02:54:10,986 : INFO : SUCCESS : Product quantity updated to 2
+2026-05-21 02:54:10,987 : INFO : Closing browser
+2026-05-21 02:54:14,204 : INFO : Opening BestBuy website
+2026-05-21 02:54:18,535 : INFO : United States selected
+2026-05-21 02:54:23,541 : INFO : =====================TEST-STARTED============================
+2026-05-21 02:54:23,541 : INFO : STARTED : Clicking Top Deals
+2026-05-21 02:54:30,383 : INFO : Screenshot captured: screenshots/top_deals_20260521_025430.png
+2026-05-21 02:54:30,383 : INFO : SUCCESS : Top Deals opened
+2026-05-21 02:54:35,384 : INFO : STARTED : Opening TV & Home Theater
+2026-05-21 02:54:42,900 : INFO : Screenshot captured: screenshots/tv_home_theater_20260521_025442.png
+2026-05-21 02:54:42,900 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-21 02:54:47,901 : INFO : STARTED : Applying price filters 500 - 100
+2026-05-21 02:55:22,160 : INFO : Screenshot captured: screenshots/invalid_price_filter_20260521_025522.png
+2026-05-21 02:55:22,161 : INFO : SUCCESS : Price filters applied
+2026-05-21 02:55:22,166 : INFO : Closing browser
+2026-05-21 02:55:25,800 : INFO : Opening BestBuy website
+2026-05-21 02:55:29,645 : INFO : United States selected
+2026-05-21 02:55:34,655 : INFO : =====================TEST-STARTED============================
+2026-05-21 02:55:34,656 : INFO : STARTED : Clicking Top Deals
+2026-05-21 02:55:40,909 : INFO : Screenshot captured: screenshots/top_deals_20260521_025540.png
+2026-05-21 02:55:40,909 : INFO : SUCCESS : Top Deals opened
+2026-05-21 02:55:45,909 : INFO : STARTED : Opening TV & Home Theater
+2026-05-21 02:55:52,843 : INFO : Screenshot captured: screenshots/tv_home_theater_20260521_025552.png
+2026-05-21 02:55:52,843 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-21 02:55:57,844 : INFO : STARTED : Applying invalid brand ABCXYZ
+2026-05-21 02:56:08,351 : INFO : Screenshot captured: screenshots/invalid_brand_20260521_025608.png
+2026-05-21 02:56:08,351 : INFO : SUCCESS : Invalid brand validation completed
+2026-05-21 02:56:08,365 : INFO : Closing browser
+2026-05-21 02:56:11,900 : INFO : Opening BestBuy website
+2026-05-21 02:56:15,874 : INFO : United States selected
+2026-05-21 02:56:20,888 : INFO : =====================TEST-STARTED============================
+2026-05-21 02:56:20,888 : INFO : STARTED : Clicking Top Deals
+2026-05-21 02:56:27,893 : INFO : Screenshot captured: screenshots/top_deals_20260521_025627.png
+2026-05-21 02:56:27,893 : INFO : SUCCESS : Top Deals opened
+2026-05-21 02:56:32,894 : INFO : STARTED : Opening TV & Home Theater
+2026-05-21 02:56:40,272 : INFO : Screenshot captured: screenshots/tv_home_theater_20260521_025640.png
+2026-05-21 02:56:40,272 : INFO : SUCCESS : TV & Home Theater opened
+2026-05-21 02:56:45,273 : INFO : STARTED : Applying Samsung, LG and Sony filters
+2026-05-21 02:57:26,934 : INFO : Screenshot captured: screenshots/brand_filters_20260521_025726.png
+2026-05-21 02:57:26,934 : INFO : SUCCESS : Brand filters applied
+2026-05-21 02:57:26,934 : INFO : STARTED : Applying price filters 0 - 250
+2026-05-21 02:58:00,469 : INFO : Screenshot captured: screenshots/valid_price_filter_20260521_025800.png
+2026-05-21 02:58:00,469 : INFO : SUCCESS : Price filters applied
+2026-05-21 02:58:00,469 : INFO : STARTED : Adding first two products
+2026-05-21 02:58:02,639 : INFO : Screenshot captured: screenshots/first_product_added_20260521_025802.png
+2026-05-21 02:58:14,867 : INFO : Screenshot captured: screenshots/second_product_added_20260521_025814.png
+2026-05-21 02:58:14,867 : INFO : SUCCESS : Two products added to cart
+2026-05-21 02:58:23,483 : INFO : Screenshot captured: screenshots/cart_page_20260521_025823.png
+2026-05-21 02:58:23,484 : INFO : SUCCESS : Cart page opened
+2026-05-21 02:58:28,901 : INFO : Screenshot captured: screenshots/checkout_page_20260521_025828.png
+2026-05-21 02:58:28,901 : INFO : SUCCESS : Checkout page opened
+2026-05-21 02:58:33,902 : INFO : STARTED : Entering invalid email abc#xyz.com
+2026-05-21 02:58:59,249 : INFO : Screenshot captured: screenshots/invalid_email_entered_20260521_025859.png
+2026-05-21 02:59:02,437 : INFO : Screenshot captured: screenshots/invalid_email_validation_20260521_025902.png
+2026-05-21 02:59:02,437 : INFO : SUCCESS : Invalid email validation completed
+2026-05-21 02:59:02,437 : INFO : =====================TEST-ENDED============================
+2026-05-21 02:59:07,451 : INFO : Closing browser

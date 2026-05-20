@@ -1,5 +1,4 @@
 import time
-import allure
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -7,7 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from config.config import Config
 from utilities.logger import LogGenerator
-
+from utilities.screenshot_utils import ScreenshotUtil
+from selenium.webdriver.support.ui import Select
 
 class CartPage:
 
@@ -16,8 +16,6 @@ class CartPage:
         self.driver = driver
         self.wait = WebDriverWait(driver, Config.EXPLICIT_WAIT)
         self.logger = LogGenerator.loggen()
-
-    # ===== LOCATORS =====
 
     checkout_button = (
         By.XPATH,
@@ -31,11 +29,7 @@ class CartPage:
         "//button[contains(text(),'Continue')]"
     )
 
-    # ===== METHODS =====
-
     def click_checkout(self):
-
-        print("\n========== CLICKING CHECKOUT ==========")
 
         checkout = self.wait.until(
             EC.element_to_be_clickable(
@@ -45,17 +39,10 @@ class CartPage:
 
         checkout.click()
 
-        self.driver.save_screenshot(
-            "screenshots/checkout.png"
+        ScreenshotUtil.capture_screenshot(
+            self.driver,
+            "checkout_page"
         )
-
-        allure.attach.file(
-            "screenshots/checkout.png",
-            name="Checkout Page",
-            attachment_type=allure.attachment_type.PNG
-        )
-
-        print("SUCCESS : Checkout page opened")
 
         self.logger.info(
             "SUCCESS : Checkout page opened"
@@ -64,8 +51,6 @@ class CartPage:
         time.sleep(5)
 
     def enter_invalid_email(self, invalid_email):
-
-        print("\n========== ENTERING INVALID EMAIL ==========")
 
         self.logger.info(
             f"STARTED : Entering invalid email {invalid_email}"
@@ -80,10 +65,9 @@ class CartPage:
         email_box.clear()
         email_box.send_keys(invalid_email)
 
-        print(f"Invalid email entered : {invalid_email}")
-
-        self.driver.save_screenshot(
-            "screenshots/invalid_email_entered.png"
+        ScreenshotUtil.capture_screenshot(
+            self.driver,
+            "invalid_email_entered"
         )
 
         time.sleep(3)
@@ -96,20 +80,54 @@ class CartPage:
 
         continue_btn.click()
 
-        self.driver.save_screenshot(
-            "screenshots/invalid_email_validation.png"
+        ScreenshotUtil.capture_screenshot(
+            self.driver,
+            "invalid_email_validation"
         )
-
-        allure.attach.file(
-            "screenshots/invalid_email_validation.png",
-            name="Invalid Email Validation",
-            attachment_type=allure.attachment_type.PNG
-        )
-
-        print("SUCCESS : Invalid email validation completed")
 
         self.logger.info(
             "SUCCESS : Invalid email validation completed"
         )
 
+        self.logger.info(
+            "=====================TEST-ENDED============================"
+        )
+
         time.sleep(5)
+
+##############################################################################################################
+
+    def increase_product_quantity(self, quantity="2"):
+        self.logger.info(
+            f"STARTED : Updating product quantity to {quantity}"
+        )
+
+        quantity_dropdown = self.wait.until(
+            EC.element_to_be_clickable(
+                (
+                    By.XPATH,
+                    "(//select[contains(@id,'quantity')])[1]"
+                )
+            )
+        )
+
+        select_quantity = Select(quantity_dropdown)
+
+        select_quantity.select_by_visible_text(quantity)
+
+        time.sleep(5)
+
+        ScreenshotUtil.capture_screenshot(
+            self.driver,
+            "updated_product_quantity"
+        )
+
+        updated_quantity = (
+            select_quantity.first_selected_option.text
+        )
+
+        self.logger.info(
+            f"SUCCESS : Product quantity updated to {updated_quantity}"
+        )
+
+        return updated_quantity

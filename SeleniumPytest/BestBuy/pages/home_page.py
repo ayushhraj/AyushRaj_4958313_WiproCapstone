@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from config.config import Config
 from utilities.logger import LogGenerator
+from utilities.screenshot_utils import ScreenshotUtil
 
 
 class HomePage:
@@ -16,15 +17,13 @@ class HomePage:
         self.wait = WebDriverWait(driver, Config.EXPLICIT_WAIT)
         self.logger = LogGenerator.loggen()
 
-    # ===== LOCATORS =====
-
     top_deals = (By.XPATH, "(//*[contains(text(),'Top Deals')])[1]")
-
-    # ===== METHODS =====
 
     def click_top_deals(self):
 
-        print("\n========== CLICKING TOP DEALS ==========")
+        self.logger.info(
+            "=====================TEST-STARTED============================"
+        )
 
         self.logger.info(
             "STARTED : Clicking Top Deals"
@@ -36,11 +35,10 @@ class HomePage:
 
         top.click()
 
-        self.driver.save_screenshot(
-            "screenshots/top_deals.png"
+        ScreenshotUtil.capture_screenshot(
+            self.driver,
+            "top_deals"
         )
-
-        print("SUCCESS : Top Deals page opened")
 
         self.logger.info(
             "SUCCESS : Top Deals opened"

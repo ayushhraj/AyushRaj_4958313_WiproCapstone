@@ -9,6 +9,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from config.config import Config
+from utilities.logger import LogGenerator
+
+
+logger = LogGenerator.loggen()
 
 
 @pytest.fixture()
@@ -29,13 +33,9 @@ def setup():
 
     wait = WebDriverWait(driver, Config.EXPLICIT_WAIT)
 
-    print("\n========== OPENING BESTBUY WEBSITE ==========")
+    logger.info("Opening BestBuy website")
 
     driver.get(Config.BASE_URL)
-
-    print("SUCCESS : BestBuy website opened")
-
-    print("\n========== SELECTING COUNTRY ==========")
 
     usa = wait.until(
         EC.element_to_be_clickable(
@@ -45,12 +45,12 @@ def setup():
 
     usa.click()
 
-    print("SUCCESS : United States selected")
+    logger.info("United States selected")
 
     time.sleep(5)
 
     yield driver
 
-    print("\n========== CLOSING BROWSER ==========")
+    logger.info("Closing browser")
 
     driver.quit()

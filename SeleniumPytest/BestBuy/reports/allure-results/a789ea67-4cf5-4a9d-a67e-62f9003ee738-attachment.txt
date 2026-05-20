@@ -1,0 +1,24 @@
+[32mINFO    [0m BestBuy:conftest.py:36 Opening BestBuy website
+[32mINFO    [0m BestBuy:conftest.py:48 United States selected
+[32mINFO    [0m BestBuy:home_page.py:24 =====================TEST-STARTED============================
+[32mINFO    [0m BestBuy:home_page.py:28 STARTED : Clicking Top Deals
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/top_deals_20260521_011004.png
+[32mINFO    [0m BestBuy:home_page.py:43 SUCCESS : Top Deals opened
+[32mINFO    [0m BestBuy:top_deals_page.py:27 STARTED : Opening TV & Home Theater
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/tv_home_theater_20260521_011014.png
+[32mINFO    [0m BestBuy:top_deals_page.py:47 SUCCESS : TV & Home Theater opened
+[32mINFO    [0m BestBuy:tv_products_page.py:60 STARTED : Applying Samsung, LG and Sony filters
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/brand_filters_20260521_011102.png
+[32mINFO    [0m BestBuy:tv_products_page.py:128 SUCCESS : Brand filters applied
+[32mINFO    [0m BestBuy:tv_products_page.py:139 STARTED : Applying price filters 0 - 250
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/valid_price_filter_20260521_011136.png
+[32mINFO    [0m BestBuy:tv_products_page.py:195 SUCCESS : Price filters applied
+[32mINFO    [0m BestBuy:tv_products_page.py:201 STARTED : Adding first two products
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/first_product_added_20260521_011139.png
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/second_product_added_20260521_011152.png
+[32mINFO    [0m BestBuy:tv_products_page.py:266 SUCCESS : Two products added to cart
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/cart_page_20260521_011204.png
+[32mINFO    [0m BestBuy:tv_products_page.py:290 SUCCESS : Cart page opened
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/checkout_page_20260521_011210.png
+[32mINFO    [0m BestBuy:cart_page.py:47 SUCCESS : Checkout page opened
+[32mINFO    [0m BestBuy:conftest.py:54 Closing browser
