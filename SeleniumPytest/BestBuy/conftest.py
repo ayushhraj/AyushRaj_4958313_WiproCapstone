@@ -54,3 +54,21 @@ def setup():
     logger.info("Closing browser\n")
 
     driver.quit()
+
+def pytest_unconfigure(config):
+
+    print("\n==========================================")
+    print("TESTS COMPLETED SUCCESSFULLY")
+    print("GENERATING ALLURE REPORT...")
+    print("==========================================\n")
+
+    # Generate permanent Allure Report
+    os.system(
+        "allure generate reports/allure-results "
+        "-o reports/allure-report --clean"
+    )
+
+    # Open Allure Report automatically
+    os.system(
+        "allure open reports/allure-report"
+    )

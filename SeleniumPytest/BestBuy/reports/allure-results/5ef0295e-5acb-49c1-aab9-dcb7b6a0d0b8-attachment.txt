@@ -1,0 +1,20 @@
+[32mINFO    [0m BestBuy:conftest.py:36 Opening BestBuy website
+[32mINFO    [0m BestBuy:conftest.py:48 United States selected
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:221 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:222 NEGATIVE TEST CASE 1 : INVALID PRICE FILTER
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:223 ==================================================
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/top_deals_20260522_170125.png
+[32mINFO    [0m BestBuy:home_page.py:35 SUCCESS : Top Deals opened
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/tv_home_theater_20260522_170136.png
+[32mINFO    [0m BestBuy:top_deals_page.py:43 SUCCESS : TV & Home Theater opened
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:238 STEP 1 : Applying Invalid Price Filter
+[32mINFO    [0m BestBuy:tv_products_page.py:81 STARTED : Range: ('500', '100') - ('3276378', '2397892')
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/invalid_price_filter_20260522_170215.png
+[32mINFO    [0m BestBuy:tv_products_page.py:137 SUCCESS : Price filters applied
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:245 ASSERTION : Validating Invalid Price Filter
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:260 ASSERTION PASSED : No results validation successful
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:289 ASSERTION PASSED : Invalid Price Validation Successful
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:291 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:292 TEST CASE PASSED
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:293 ==================================================
+[32mINFO    [0m BestBuy:conftest.py:54 Closing browser

@@ -1,0 +1,1 @@
+Price filter applied successfully : 500 to 100

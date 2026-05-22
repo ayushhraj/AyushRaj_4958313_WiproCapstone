@@ -1,0 +1,17 @@
+[32mINFO    [0m BestBuy:conftest.py:36 Opening BestBuy website
+[32mINFO    [0m BestBuy:conftest.py:48 United States selected
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:46 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:47 POSITIVE TEST CASE 2 : VALIDATE TV & HOME THEATER PAGE
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:48 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:55 STEP 1 : Opening Top Deals
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/top_deals_20260522_165644.png
+[32mINFO    [0m BestBuy:home_page.py:35 SUCCESS : Top Deals opened
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:58 STEP 2 : Opening TV & Home Theater Page
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/tv_home_theater_20260522_165654.png
+[32mINFO    [0m BestBuy:top_deals_page.py:43 SUCCESS : TV & Home Theater opened
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:61 ASSERTION : Validating TV Page Navigation
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:64 ASSERTION PASSED : TV Page Opened Successfully
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:66 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:67 TEST CASE PASSED
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:68 ==================================================
+[32mINFO    [0m BestBuy:conftest.py:54 Closing browser

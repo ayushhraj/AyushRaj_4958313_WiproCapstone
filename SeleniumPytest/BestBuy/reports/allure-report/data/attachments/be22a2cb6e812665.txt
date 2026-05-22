@@ -1,0 +1,33 @@
+[32mINFO    [0m BestBuy:conftest.py:36 Opening BestBuy website
+[32mINFO    [0m BestBuy:conftest.py:48 United States selected
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:164 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:165 POSITIVE TEST CASE 5 : PRODUCT QUANTITY UPDATE
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:166 ==================================================
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/top_deals_20260522_165929.png
+[32mINFO    [0m BestBuy:home_page.py:35 SUCCESS : Top Deals opened
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/tv_home_theater_20260522_165939.png
+[32mINFO    [0m BestBuy:top_deals_page.py:43 SUCCESS : TV & Home Theater opened
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : LG filter applied
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : Samsung filter applied
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : Sony filter applied
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/brand_filters_applied_20260522_165957.png
+[32mINFO    [0m BestBuy:tv_products_page.py:72 SUCCESS : All brand filters applied
+[32mINFO    [0m BestBuy:tv_products_page.py:81 STARTED : Range: 100 - 500
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/valid_price_filter_20260522_170029.png
+[32mINFO    [0m BestBuy:tv_products_page.py:137 SUCCESS : Price filters applied
+[32mINFO    [0m BestBuy:tv_products_page.py:143 STARTED : Adding first two products
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/first_product_added_20260522_170032.png
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/second_product_added_20260522_170044.png
+[32mINFO    [0m BestBuy:tv_products_page.py:208 SUCCESS : Two products added to cart
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/cart_page_20260522_170054.png
+[32mINFO    [0m BestBuy:tv_products_page.py:232 SUCCESS : Cart page opened
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:191 STEP 1 : Increasing Product Quantity
+[32mINFO    [0m BestBuy:cart_page.py:97 STARTED : Updating product quantity to 2
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/updated_product_quantity_20260522_170104.png
+[32mINFO    [0m BestBuy:cart_page.py:125 SUCCESS : Product quantity updated to 2
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:196 ASSERTION : Validating Updated Quantity
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:204 ASSERTION PASSED : Quantity Updated Successfully
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:206 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:207 TEST CASE PASSED
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:208 ==================================================
+[32mINFO    [0m BestBuy:conftest.py:54 Closing browser

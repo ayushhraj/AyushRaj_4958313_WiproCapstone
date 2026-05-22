@@ -1,0 +1,46 @@
+[32mINFO    [0m BestBuy:conftest.py:36 Opening BestBuy website
+[32mINFO    [0m BestBuy:conftest.py:48 United States selected
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:25 ==================================================
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:26 END TO END TEST : BESTBUY COMPLETE WORKFLOW
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:27 ==================================================
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:32 ASSERTION PASSED : BestBuy website loaded successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:44 STEP 1 : Opening Top Deals Page
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/top_deals_20260522_165418.png
+[32mINFO    [0m BestBuy:home_page.py:35 SUCCESS : Top Deals opened
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:47 ASSERTION PASSED : Top Deals page opened successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:51 STEP 2 : Opening TV & Home Theater Section
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/tv_home_theater_20260522_165428.png
+[32mINFO    [0m BestBuy:top_deals_page.py:43 SUCCESS : TV & Home Theater opened
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:54 ASSERTION PASSED : TV section opened successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:58 STEP 3 : Applying Brand Filters
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : LG filter applied
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : Samsung filter applied
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : Sony filter applied
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/brand_filters_applied_20260522_165446.png
+[32mINFO    [0m BestBuy:tv_products_page.py:72 SUCCESS : All brand filters applied
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:68 ASSERTION PASSED : LG filter applied successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:68 ASSERTION PASSED : Samsung filter applied successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:68 ASSERTION PASSED : Sony filter applied successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:73 STEP 4 : Applying Price Filter
+[32mINFO    [0m BestBuy:tv_products_page.py:81 STARTED : Range: 0 - 250
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/valid_price_filter_20260522_165519.png
+[32mINFO    [0m BestBuy:tv_products_page.py:137 SUCCESS : Price filters applied
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:81 ASSERTION PASSED : Price filter applied successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:84 STEP 5 : Adding Products To Cart
+[32mINFO    [0m BestBuy:tv_products_page.py:143 STARTED : Adding first two products
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/first_product_added_20260522_165522.png
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/second_product_added_20260522_165534.png
+[32mINFO    [0m BestBuy:tv_products_page.py:208 SUCCESS : Two products added to cart
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:89 ASSERTION PASSED : Products added to cart successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:92 STEP 6 : Navigating To Cart
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/cart_page_20260522_165543.png
+[32mINFO    [0m BestBuy:tv_products_page.py:232 SUCCESS : Cart page opened
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:95 ASSERTION PASSED : Cart page opened successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:99 STEP 7 : Proceeding To Checkout
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/checkout_page_20260522_165549.png
+[32mINFO    [0m BestBuy:cart_page.py:47 SUCCESS : Checkout page opened
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:110 ASSERTION PASSED : Checkout page opened successfully
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:112 ==================================================
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:113 END TO END TEST CASE PASSED
+[32mINFO    [0m BestBuy:test_bestbuy_workflow.py:114 ==================================================
+[32mINFO    [0m BestBuy:conftest.py:54 Closing browser
