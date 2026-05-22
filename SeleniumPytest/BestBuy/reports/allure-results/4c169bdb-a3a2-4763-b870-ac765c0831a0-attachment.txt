@@ -1,0 +1,36 @@
+[32mINFO    [0m BestBuy:conftest.py:36 Opening BestBuy website
+[32mINFO    [0m BestBuy:conftest.py:48 United States selected
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:347 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:348 NEGATIVE TEST CASE 3 : INVALID EMAIL VALIDATION
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:349 ==================================================
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/top_deals_20260522_052702.png
+[32mINFO    [0m BestBuy:home_page.py:35 SUCCESS : Top Deals opened
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/tv_home_theater_20260522_052717.png
+[32mINFO    [0m BestBuy:top_deals_page.py:43 SUCCESS : TV & Home Theater opened
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : LG filter applied
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : Samsung filter applied
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : Sony filter applied
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/brand_filters_applied_20260522_052735.png
+[32mINFO    [0m BestBuy:tv_products_page.py:72 SUCCESS : All brand filters applied
+[32mINFO    [0m BestBuy:tv_products_page.py:81 STARTED : Range: 0 - 250
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/valid_price_filter_20260522_052809.png
+[32mINFO    [0m BestBuy:tv_products_page.py:137 SUCCESS : Price filters applied
+[32mINFO    [0m BestBuy:tv_products_page.py:143 STARTED : Adding first two products
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/first_product_added_20260522_052811.png
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/second_product_added_20260522_052824.png
+[32mINFO    [0m BestBuy:tv_products_page.py:208 SUCCESS : Two products added to cart
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/cart_page_20260522_052832.png
+[32mINFO    [0m BestBuy:tv_products_page.py:232 SUCCESS : Cart page opened
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/checkout_page_20260522_052838.png
+[32mINFO    [0m BestBuy:cart_page.py:47 SUCCESS : Checkout page opened
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:385 STEP 1 : Entering Invalid Email
+[32mINFO    [0m BestBuy:cart_page.py:55 STARTED : Entering invalid email abc#xyz.com
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/invalid_email_entered_20260522_052843.png
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/invalid_email_validation_20260522_052847.png
+[32mINFO    [0m BestBuy:cart_page.py:88 SUCCESS : Invalid email validation completed
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:390 ASSERTION : Validating Invalid Email Error
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:410 ASSERTION PASSED : Invalid Email Validation Successful
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:412 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:413 TEST CASE PASSED
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:414 ==================================================
+[32mINFO    [0m BestBuy:conftest.py:54 Closing browser

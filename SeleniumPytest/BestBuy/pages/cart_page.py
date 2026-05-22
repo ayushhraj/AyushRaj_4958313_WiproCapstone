@@ -89,13 +89,9 @@ class CartPage:
             "SUCCESS : Invalid email validation completed"
         )
 
-        self.logger.info(
-            "=====================TEST-ENDED============================"
-        )
-
         time.sleep(5)
 
-##############################################################################################################
+
 
     def increase_product_quantity(self, quantity="2"):
         self.logger.info(

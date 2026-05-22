@@ -19,10 +19,6 @@ class TVProductsPage:
 
     # ===== LOCATORS =====
 
-    samsung_checkbox = (By.XPATH, "//input[@id='Samsung']")
-    lg_checkbox = (By.XPATH, "//input[@id='LG']")
-    sony_checkbox = (By.XPATH, "//input[@id='Sony']")
-
     min_price = (By.XPATH, "//input[@placeholder='Min Price']")
     max_price = (By.XPATH, "//input[@placeholder='Max Price']")
 
@@ -40,79 +36,40 @@ class TVProductsPage:
 
     # ===== METHODS =====
 
-    def apply_brand_filters(self):
+    def apply_brand_filters(self, brands):
 
-        self.logger.info(
-            "STARTED : Applying Samsung, LG and Sony filters"
-        )
-
+        # Scroll to Brand Filter section
         for i in range(1800, 4200, 300):
-
             self.driver.execute_script(
                 f"window.scrollTo(0, {i});"
             )
-
             time.sleep(0.8)
 
-        samsung = self.wait.until(
-            EC.element_to_be_clickable(
-                self.samsung_checkbox
+        # Apply all brand filters dynamically
+        for brand in brands:
+            brand_checkbox = self.wait.until(
+                EC.element_to_be_clickable(
+                    (
+                        By.XPATH,
+                        f"//input[@id='{brand}']"
+                    )
+                )
             )
-        )
-
-        self.driver.execute_script(
-            "arguments[0].click();",
-            samsung
-        )
-
-        time.sleep(3)
-
-        lg = self.wait.until(
-            EC.element_to_be_clickable(
-                self.lg_checkbox
-            )
-        )
-
-        self.driver.execute_script(
-            "arguments[0].click();",
-            lg
-        )
-
-        time.sleep(3)
-
-        sony = self.wait.until(
-            EC.element_to_be_clickable(
-                self.sony_checkbox
-            )
-        )
-
-        self.driver.execute_script(
-            "arguments[0].click();",
-            sony
-        )
-
-        time.sleep(10)
-
-        self.driver.refresh()
-
-        time.sleep(8)
-
-        for i in range(1800, 4200, 300):
 
             self.driver.execute_script(
-                f"window.scrollTo(0, {i});"
+                "arguments[0].click();",
+                brand_checkbox
             )
 
-            time.sleep(0.7)
+            self.logger.info(f"SUCCESS : {brand} filter applied")
+            time.sleep(2)
 
         ScreenshotUtil.capture_screenshot(
             self.driver,
-            "brand_filters"
+            "brand_filters_applied"
         )
 
-        self.logger.info(
-            "SUCCESS : Brand filters applied"
-        )
+        self.logger.info("SUCCESS : All brand filters applied")
 
     def apply_price_filters(
         self,
@@ -122,7 +79,7 @@ class TVProductsPage:
     ):
 
         self.logger.info(
-            f"STARTED : Applying price filters {min_val} - {max_val}"
+            f"STARTED : Range: {min_val} - {max_val}"
         )
 
         min_box = self.wait.until(

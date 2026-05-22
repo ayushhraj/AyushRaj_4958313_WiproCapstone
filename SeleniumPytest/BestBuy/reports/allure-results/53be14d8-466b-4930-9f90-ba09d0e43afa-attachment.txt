@@ -1,0 +1,19 @@
+[32mINFO    [0m BestBuy:conftest.py:36 Opening BestBuy website
+[32mINFO    [0m BestBuy:conftest.py:48 United States selected
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:118 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:119 POSITIVE TEST CASE 4 : VALID PRICE FILTER
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:120 ==================================================
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/top_deals_20260522_052038.png
+[32mINFO    [0m BestBuy:home_page.py:35 SUCCESS : Top Deals opened
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/tv_home_theater_20260522_052051.png
+[32mINFO    [0m BestBuy:top_deals_page.py:43 SUCCESS : TV & Home Theater opened
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:136 STEP 1 : Applying Valid Price Filter
+[32mINFO    [0m BestBuy:tv_products_page.py:81 STARTED : Range: 0 - 250
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/valid_price_filter_20260522_052130.png
+[32mINFO    [0m BestBuy:tv_products_page.py:137 SUCCESS : Price filters applied
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:143 ASSERTION : Validating Price Filter in the URL
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:151 ASSERTION PASSED : Price Filter Applied Successfully
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:153 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:154 TEST CASE PASSED
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:155 ==================================================
+[32mINFO    [0m BestBuy:conftest.py:54 Closing browser

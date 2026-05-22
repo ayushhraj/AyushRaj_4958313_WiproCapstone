@@ -51,6 +51,6 @@ def setup():
 
     yield driver
 
-    logger.info("Closing browser")
+    logger.info("Closing browser\n")
 
     driver.quit()

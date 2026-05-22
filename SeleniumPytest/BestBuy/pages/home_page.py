@@ -21,14 +21,6 @@ class HomePage:
 
     def click_top_deals(self):
 
-        self.logger.info(
-            "=====================TEST-STARTED============================"
-        )
-
-        self.logger.info(
-            "STARTED : Clicking Top Deals"
-        )
-
         top = self.wait.until(
             EC.element_to_be_clickable(self.top_deals)
         )

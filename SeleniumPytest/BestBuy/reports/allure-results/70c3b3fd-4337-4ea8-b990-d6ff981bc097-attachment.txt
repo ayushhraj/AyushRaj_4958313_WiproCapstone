@@ -1,7 +1,0 @@
-[32mINFO    [0m BestBuy:home_page.py:29 =====================TEST-STARTED============================
-[32mINFO    [0m BestBuy:home_page.py:33 STARTED : Clicking Top Deals
-[32mINFO    [0m BestBuy:home_page.py:49 SUCCESS : Top Deals opened
-[32mINFO    [0m BestBuy:top_deals_page.py:32 STARTED : Opening TV & Home Theater
-[32mINFO    [0m BestBuy:top_deals_page.py:53 SUCCESS : TV & Home Theater opened
-[32mINFO    [0m BestBuy:tv_products_page.py:155 STARTED : Applying price filters 0 - 250
-[32mINFO    [0m BestBuy:tv_products_page.py:228 SUCCESS : Price filters applied

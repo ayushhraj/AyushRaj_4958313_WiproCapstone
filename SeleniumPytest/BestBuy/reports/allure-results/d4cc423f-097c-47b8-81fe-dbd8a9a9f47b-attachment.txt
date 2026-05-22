@@ -1,0 +1,26 @@
+[32mINFO    [0m BestBuy:conftest.py:36 Opening BestBuy website
+[32mINFO    [0m BestBuy:conftest.py:48 United States selected
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:75 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:76 POSITIVE TEST CASE 3 : VALID BRAND FILTER
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:77 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:85 STEP 1 : Opening Top Deals
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/top_deals_20260522_051950.png
+[32mINFO    [0m BestBuy:home_page.py:35 SUCCESS : Top Deals opened
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:88 STEP 2 : Opening TV Section
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/tv_home_theater_20260522_052000.png
+[32mINFO    [0m BestBuy:top_deals_page.py:43 SUCCESS : TV & Home Theater opened
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:91 STEP 3 : Applying Brand Filters
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : LG filter applied
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : Samsung filter applied
+[32mINFO    [0m BestBuy:tv_products_page.py:64 SUCCESS : Sony filter applied
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/brand_filters_applied_20260522_052018.png
+[32mINFO    [0m BestBuy:tv_products_page.py:72 SUCCESS : All brand filters applied
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:97 ASSERTION : Validating Applied Brand Filters
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:103 ASSERTION PASSED : LG filter applied successfully
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:103 ASSERTION PASSED : Samsung filter applied successfully
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:103 ASSERTION PASSED : Sony filter applied successfully
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:108 ASSERTION PASSED : Brand Filters Applied Successfully
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:110 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:111 TEST CASE PASSED
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:112 ==================================================
+[32mINFO    [0m BestBuy:conftest.py:54 Closing browser

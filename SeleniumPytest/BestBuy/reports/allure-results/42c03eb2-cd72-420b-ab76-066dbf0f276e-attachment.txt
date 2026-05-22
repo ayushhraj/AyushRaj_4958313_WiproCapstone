@@ -1,0 +1,14 @@
+[32mINFO    [0m BestBuy:conftest.py:36 Opening BestBuy website
+[32mINFO    [0m BestBuy:conftest.py:48 United States selected
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:21 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:22 POSITIVE TEST CASE 1 : VALIDATE TOP DEALS NAVIGATION
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:23 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:29 STEP 1 : Opening Top Deals Page
+[32mINFO    [0m BestBuy:screenshot_utils.py:39 Screenshot captured: screenshots/top_deals_20260522_051850.png
+[32mINFO    [0m BestBuy:home_page.py:35 SUCCESS : Top Deals opened
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:32 ASSERTION : Validating Top Deals URL
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:35 ASSERTION PASSED : Top Deals Page Opened Successfully
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:37 ==================================================
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:38 TEST CASE PASSED
+[32mINFO    [0m BestBuy:test_positive_negative_tc.py:39 ==================================================
+[32mINFO    [0m BestBuy:conftest.py:54 Closing browser

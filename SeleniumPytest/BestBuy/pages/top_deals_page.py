@@ -24,10 +24,6 @@ class TopDealsPage:
 
     def click_tv_home_theater(self):
 
-        self.logger.info(
-            "STARTED : Opening TV & Home Theater"
-        )
-
         tv = self.wait.until(
             EC.element_to_be_clickable(
                 self.tv_home_theater
