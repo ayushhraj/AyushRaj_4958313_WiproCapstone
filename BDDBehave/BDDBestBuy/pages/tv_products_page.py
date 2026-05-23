@@ -67,6 +67,11 @@ class TVProductsPage:
         "//input[@placeholder='Search Brand']"
     )
 
+    applied_price_filter_checkbox = (
+        By.CSS_SELECTOR,
+        "input[id='100_to_500']"
+    )
+
     # ==========================================================
     # APPLY BRAND FILTERS
     # ==========================================================
@@ -442,3 +447,36 @@ class TVProductsPage:
             name="Invalid Brand Log",
             attachment_type=allure.attachment_type.TEXT
         )
+
+    # ==========================================================
+    # INVALID PRICE FILTER- CLEAR
+    # ==========================================================
+    def clear_applied_price_filter(self):
+
+        self.logger.info(
+            "CLEARING APPLIED PRICE FILTER"
+        )
+
+        self.driver.execute_script(
+            "window.scrollTo(0, document.body.scrollHeight);"
+        )
+
+        time.sleep(2)
+
+        checkbox = self.wait.until(
+
+            EC.element_to_be_clickable(
+                self.applied_price_filter_checkbox
+            )
+        )
+
+        self.driver.execute_script(
+            "arguments[0].click();",
+            checkbox
+        )
+
+        self.logger.info(
+            "PREVIOUS PRICE FILTER REMOVED"
+        )
+
+        time.sleep(3)

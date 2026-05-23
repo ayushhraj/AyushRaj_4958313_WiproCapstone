@@ -1,5 +1,5 @@
 import openpyxl
-
+from openpyxl import load_workbook
 
 class ExcelUtils:
 
@@ -54,39 +54,35 @@ class ExcelUtils:
     @staticmethod
     def get_invalid_price_data():
 
-        workbook = openpyxl.load_workbook(
+        workbook = load_workbook(
             "test_data/test_data.xlsx"
         )
 
-        sheet = workbook[
-            "InvalidPriceFilters"
-        ]
+        sheet = workbook["InvalidPriceFilters"]
 
-        data = []
+        invalid_price_data = []
 
-        for row in range(
-                2,
-                sheet.max_row + 1
-        ):
-
+        for row in range(2, sheet.max_row + 1):
             min_price = sheet.cell(
-                row,
-                1
+                row=row,
+                column=1
             ).value
 
             max_price = sheet.cell(
-                row,
-                2
+                row=row,
+                column=2
             ).value
 
-            data.append(
+            invalid_price_data.append(
                 (
                     str(min_price),
                     str(max_price)
                 )
             )
 
-        return data
+        workbook.close()
+
+        return invalid_price_data
 
     # ==========================================================
     # READ INVALID BRAND DATA

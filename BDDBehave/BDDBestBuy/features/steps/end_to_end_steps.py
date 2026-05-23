@@ -44,7 +44,7 @@ def step_launch(context):
 
     allure.attach(
         context.driver.get_screenshot_as_png(),
-        name="USA_Region_Selected",
+        name="HomePage_Loaded",
         attachment_type=allure.attachment_type.PNG
     )
 

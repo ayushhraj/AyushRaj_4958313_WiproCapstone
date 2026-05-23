@@ -92,6 +92,10 @@ def step_price_validation(context):
         in context.driver.current_url
     )
 
+    assert min_price < max_price, (
+        "Minimum price should be less than maximum price"
+    )
+
     logger.info(
         "ASSERTION PASSED : PRICE FILTER VALIDATED"
     )
@@ -123,39 +127,74 @@ def step_quantity_validation(context):
         "ASSERTION : VALIDATING UPDATED QUANTITY"
     )
 
-    assert context.updated_quantity == "2"
+    assert context.updated_quantity == "2", (
+            f"Expected quantity 2 "
+            f"but got {context.updated_quantity}"
+        )
 
     logger.info(
         "ASSERTION PASSED : PRODUCT QUANTITY VALIDATED"
     )
 
+#######################################################################################################
 
 # ==========================================================
 # [NEG_TC_01] INVALID PRICE FILTER
 # ==========================================================
 @when("User applies invalid price filters")
-def step_invalid_price(context):
+def step_invalid_price_filter(context):
 
     logger.info(
-        "STEP : APPLYING INVALID PRICE FILTER"
+        "STEP : APPLYING INVALID PRICE FILTERS"
     )
 
-    data = ExcelUtils.get_invalid_price_data()
+    context.invalid_price_results = []
 
-    min_price = data[0][0]
-
-    max_price = data[0][1]
-
-    context.tv.apply_price_filters(
-        min_price,
-        max_price,
-        "invalid_price_filter"
+    invalid_prices = (
+        ExcelUtils.get_invalid_price_data()
     )
 
+    for index, (min_price, max_price) in enumerate(invalid_prices):
+        if index > 0:
+            logger.info(
+                "REMOVING PREVIOUS PRICE FILTER"
+            )
+
+            context.tv.clear_applied_price_filter()
+
+        logger.info(
+            f"APPLYING INVALID FILTER : "
+            f"{min_price} TO {max_price}"
+        )
+
+        context.tv.apply_price_filters(
+            min_price,
+            max_price,
+            "invalid_price_filter"
+        )
+
+        current_url = (
+            context.driver.current_url.lower()
+        )
+
+        page_source = (
+            context.driver.page_source.lower()
+        )
+
+        context.invalid_price_results.append({
+            "min_price": min_price,
+            "max_price": max_price,
+            "url": current_url,
+            "page_source": page_source
+        })
+
+        logger.info(
+            f"INVALID PRICE FILTER APPLIED : "
+            f"{min_price} TO {max_price}"
+        )
     logger.info(
-        "INVALID PRICE FILTER APPLIED"
+        "ALL INVALID PRICE FILTER DATASETS APPLIED"
     )
-
 
 @then("Invalid price validation should display")
 def step_invalid_price_validation(context):
@@ -164,17 +203,59 @@ def step_invalid_price_validation(context):
         "ASSERTION : VALIDATING INVALID PRICE FILTER"
     )
 
-    assert (
-        "No results found"
-        in context.driver.page_source
-        or
-        "to"
-        in context.driver.current_url
-    )
+    for result in context.invalid_price_results:
 
-    logger.info(
-        "ASSERTION PASSED : INVALID PRICE VALIDATED"
-    )
+        min_price = result["min_price"]
+        max_price = result["max_price"]
+
+        current_url = result["url"]
+        page_source = result["page_source"]
+
+        # CASE 1 : WEBSITE SHOWS NO RESULTS
+        no_results_validation = any(
+            msg in page_source
+            for msg in [
+                "no results found",
+                "0 results",
+                "sorry",
+                "We're"
+            ]
+        )
+
+        # CASE 2 : WEBSITE NORMALIZES RANGE
+        normalized_min = min(
+            int(min_price),
+            int(max_price)
+        )
+
+        normalized_max = max(
+            int(min_price),
+            int(max_price)
+        )
+
+        normalization_validation = (
+            f"{normalized_min}+to+{normalized_max}"
+            in current_url
+            or
+            f"{normalized_min}%20to%20{normalized_max}"
+            in current_url
+        )
+
+        assert (
+            no_results_validation
+            or
+            normalization_validation
+
+        ), (
+            f"Invalid price validation failed for : "
+            f"{min_price} to {max_price}"
+        )
+
+        logger.info(
+            f"ASSERTION PASSED : "
+            f"INVALID PRICE FILTER VALIDATED "
+            f"FOR {min_price} TO {max_price}"
+        )
 
 
 # ==========================================================
